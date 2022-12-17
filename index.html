@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA pictures and facts</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="ed-dev-favicon-2.png" />
+  </head>
+  <body>
+    <!-- Loading astronaut -->
+    <div class="loading hidden">
+      <img src="astronaut.svg" alt="Loading" />
+    </div>
+    <!-- Main container -->
+    <div class="container">
+      <!-- Navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- Results -->
+        <span class="navigation-item" id="results-navi">
+          <h3 class="button" onclick="renderDOM('favorites')">Favorites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="button" onclick="fetchApiPictures()">Load more</h3>
+        </span>
+        <!-- Favorites -->
+        <span class="navigation-item hidden" id="favorites-navi">
+          <h3 class="button" onclick="fetchApiPictures()">Load more NASA images</h3>
+        </span>
+      </div>
+      <!-- Image container -->
+      <div class="images-container">
+        <!-- <div class="card">
+          <a href="" title="View full image" target="_blank">
+            <img
+              src="https://apod.nasa.gov/apod/image/2007/msv1500crop.jpg"
+              alt="NASA picture of the day"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Image title</h5>
+            <p class="button">Add to favorites</p>
+            <p class="card-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
+              blanditiis molestias quidem accusantium alias nemo animi obcaecati
+              dolorem et? Voluptatem facilis sunt, sint sed ea cupiditate
+              sapiente suscipit esse distinctio. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nam labore beatae delectus repellat
+              quae nobis, incidunt cum laborum laudantium dolorem officiis quia
+              eum soluta ipsa rem? Necessitatibus eveniet saepe sunt!
+            </p> -->
+            <!-- Footer -->
+            <!-- <small class="text-muted">
+              <strong>2022.11.22</strong>
+              <span>Copyright info</span>
+            </small>
+          </div> -->
+        </div>
+      </div>
+      <!-- Added pop-up -->
+      <div class="pop-up" hidden>
+        <h1>Added!</h1>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
